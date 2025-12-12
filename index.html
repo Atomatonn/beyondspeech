@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="html">
+
+<head>
+    <meta charset="utf-8">
+    <title>Beyond Speech | Speech, Language and occupational Therapy in Northeast, Ohio</title>
+
+    <meta name="description" content="A starting template for static front-end projects + gulp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="./dist/img/Beyond-speech-icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./dist/css/styles.css">
+    <link rel="icon" type="image/png" href="./dist/img/General/favicon.ico">
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=SECRET_KEY_HERE"></script> -->
+    <script src="https://kit.fontawesome.com/fb218ddc57.js" crossorigin="anonymous"></script>
+
+    <style>
+        .loading {
+            overflow: hidden;
+            /* Hide scrollbars */
+            height: 100vh;
+            /* Prevent scrolling by fixing height to viewport */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="mobile-nav js-mobile-menu">
+        <div class="mobile-nav__close js-close"><i class="fa-solid fa-xmark"></i></div>
+        <div class="mobile-nav__inner">
+            <li><a href="team.html" class="mobile-nav__link">Our Team</a></li>
+            <li><a href="stc.html" class="mobile-nav__link">Spelling to Communicate</a></li>
+            <li><a href="bsi.html" class="mobile-nav__link">Beyond Speech Initiative</a></li>
+            <li><a href="faq.html" class="mobile-nav__link">FAQs</a></li>
+            <li><a href="contact.html" class="mobile-nav__link mobile-nav__link--contact">Contact</a></li>
+            <!-- <div class="main-nav__link main-nav__link--search"><div class="main-nav__link--search__icon"><i class="fa-solid fa-magnifying-glass"></i></div><input class="js-search-input" type="text"></div> -->
+
+        </div>
+
+    </div>
+
+    <!-- <div class="preloader" id="preloader">
+        <div class="preloader__icon-wrapper">
+            <img src="./dist/img/Beyond-speech-icon-preloader.png" alt="" class="preloader__icon-img">
+            <div class="preloader__icon-bg"></div>
+        </div>
+        <span style="display: block;">loading...</span>
+
+    </div> -->
+
+    <div class="main-body js-main-body">
+        <header class="header">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="/index.html"><img src="dist\img\logo.png" alt="" class="header__logo-img"></a>
+                </div>
+
+                <nav class="main-nav">
+                    <a href="team.html" class="main-nav__link">Our Team</a>
+                    <a href="stc.html" class="main-nav__link">Spelling to Communicate</a>
+                    <a href="bsi.html" class="main-nav__link">Beyond Speech Initiative</a>
+                    <a href="faq.html" class="main-nav__link">FAQs</a>
+                    <a href="contact.html" class="main-nav__link main-nav__link--contact">Contact</a>
+                    <!-- <div class="main-nav__link main-nav__link--search">
+                        <div class="main-nav__link--search__icon js-search-btn"><i
+                                class="fa-solid fa-magnifying-glass"></i></div><input class="js-search-input"
+                            type="text">
+                    </div> -->
+                    <div class="main-nav__link main-nav__link--mode js-lightmode">
+                        <div class="main-nav__link--mode__icon js-search-btn"><i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                    </div>
+                </nav>
+                <div class="main-nav__mobile-wrapper">
+
+                    <div class="main-nav__link main-nav__link--mode main-nav__link--mobile js-lightmode">
+                        <div class="main-nav__link--mode__icon js-search-btn"><i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                    </div>
+                    <div class="main-nav__hamburger js-hamburger"><i class="fa-solid fa-bars"></i></div>
+
+                </div>
+
+            </div>
+        </header>
+
+
+
+
+        <div class="hero">
+            <video id="hero-video" autoplay muted loop playsinline poster="fallback.jpg">
+                <source src="dist/img/kidsblocks.mp4" type="video/mp4">
+
+            </video>
+            <!-- <img src="./dist/img/HERO3.png" alt="" id="hero-video"> -->
+            <div class="hero__overlay"></div>
+            <div class="l-container l-flex hero__inner">
+
+
+                <div class="hero__image">
+                    <!-- <img src="./dist/img/TESTCHAR.png" alt=""> -->
+                </div>
+
+                <div class="hero__opener">
+                    <h1 class="hero__title"><span>We help your child find</span>Their Voice</h1>
+                    <a href="contact.html" class="hero__cta"><i class="fa-solid fa-calendar"></i> Schedule an
+                        Appointment </a>
+                </div>
+
+
+            </div>
+
+            <div class="hero__footer">
+                <div class="hero__footer-title">Our Services <i>For All Ages</i></div>
+                <div class="hero__footer-cards">
+                    <div class="hero__footer-card">Speech-Language Therapy</div>
+                    <div class="hero__footer-card">Spelling to Communicate (S2C)</div>
+                    <div class="hero__footer-card">Occupational Therapy</div>
+                    <div class="hero__footer-card">Recreation Therapy</div>
+                    <div class="hero__footer-card">Reading Intervention</div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <main>
+            <div class="l-container">
+                <section class="section">
+                    <h2 class="section__title section__title--orange">What makes us different?</h2>
+                    <p>At Beyond Speech, we <strong>never underestimate</strong> what our clients are capable of.
+                        We’re here to provide
+                        steady, compassionate support every step of the way to help each person reach their goals.</p>
+
+                    <p>We believe in building strong, meaningful connections - not just with our clients, but with their
+                        families too. You’re a big part of the journey, and we love sharing tools and strategies you can
+                        use at home. Families are <strong>always welcome</strong> to join sessions so we can give
+                        you tips to best
+                        support your loved one.</p>
+
+                    <p>Our approach is different from most therapy centers - we take the <strong>whole
+                            picture</strong> into account. By
+                        blending developmental, social, sensory, and motor perspectives, we create a truly holistic plan
+                        of care. We also know that regulation comes first, and we put a strong focus on the brain-body
+                        connection.</p>
+
+                    <p>No two clients are alike, which is why we embrace <strong>out-of-the-box thinking</strong>
+                        and design therapy
+                        that’s completely individualized.</p>
+
+                    <p>Above all, we want our space to feel warm and welcoming - a place where clients can feel
+                        comfortable, supported, and ready to grow. </p>
+                    <!-- <div class="l-flex wmud__container">
+                        <div class="wmud__card">
+                            <ul class="wmud__ul">
+                                <li class="wmud__li">We will <strong><i>never underestimate</i></strong> your child and
+                                    will provide unwavering
+                                    support to reach their goals!</li>
+                                <li class="wmud__li">We continually work to build <strong><i>meaningful
+                                            relationships</i></strong> with all of our
+                                    patients and their families. We want you to be a part of your child's progress and
+                                    are
+                                    thrilled to show you ways to carry over skills at home!</li>
+                            </ul>
+                        </div>
+                        <div class="wmud__card">
+                            <ul class="wmud__ul">
+                                <li class="wmud__li">We embrace <strong><i>out-of-the-box thinking</i></strong> and
+                                    strive to provide therapy that
+                                    is truly individualized!</li>
+                                <li class="wmud__li">We aim to provide a <strong><i>warm, welcoming
+                                            environment</i></strong> that makes patients
+                                    feel relaxed and ready to learn!</li>
+                                <li class="wmud__li">We provide treatment that integrates a <strong><i>combination of
+                                            perspectives:</i></strong>
+                                    developmental, social, sensory, and motor!</li>
+                            </ul>
+                        </div> -->
+                </section>
+                <section class="section">
+                    <h2 class="section__title section__title--blue">Our Areas of Expertise.</h2>
+                    <div class="l-flex aoe__container">
+                        <div class="aoe__card">
+                            <div class="aoe__img">
+                                <img src="./dist/img/aoe_img01.jpg" alt="">
+                            </div>
+                            <h3 class="aoe__title">Apraxia</h3>
+                        </div>
+                        <div class="aoe__card">
+                            <div class="aoe__img">
+                                <img src="./dist/img/aoe_img02.jpg" alt="">
+                            </div>
+                            <h3 class="aoe__title">Autism Spectrum Disorders</h3>
+                        </div>
+                        <div class="aoe__card">
+                            <div class="aoe__img">
+                                <img src="./dist/img/aoe_img03.jpg" alt="">
+                            </div>
+                            <h3 class="aoe__title">Early Intervention</h3>
+                        </div>
+                    </div>
+                    <div class="aoe__also"><strong>Also:</strong> Expressive Language Disorders, Receptive Language
+                        Disorders, Phonological Disorders, Articulation Disorders, Sensory Processing, Fine and Gross
+                        Motor, Torticollis, Visual Motor, Perceptual Skills, Self-Care Skills, and Feeding
+                    </div>
+                </section>
+
+
+            </div>
+            <section class="section u-remove-side-padding">
+
+                <div class="l-container">
+                    <div class="u-side-padding-20">
+                        <h2 class="section__title">Here's why people choose us!</h2>
+
+                    </div>
+                </div>
+                <div class="l-flex testimonial__container">
+
+
+                    <section class="splide" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
+                                            fermentum ligula,
+                                            nec vestibulum augue sagittis cursus. Fusce sed consequat lectus, fermentum
+                                            congue neque.
+                                            Proin imperdiet nisl non neque lobortis pellentesque eget at enim.
+                                            Vestibulum consequat
+                                            lacus dolor, at tempus arcu convallis vitae. In dignissim hendrerit mi eu
+                                            ultricies. Proin
+                                            justo elit, tristique a est ac, venenatis venenatis risus. Suspendisse ac
+                                            porta odio.
+                                            Maecenas egestas blandit quam, in feugiat dolor tincidunt vel. Suspendisse
+                                            sem massa, dictum
+                                            vel sagittis sit amet, vehicula tempus quam. Donec sed orci quis velit
+                                            faucibus rhoncus.
+                                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                            cubilia curae;
+                                        </blockquote>
+
+                                    </div>
+                                    <span class="testimonial__author">
+                                        <div class="testimonial__author-pfp"><img src="./dist/img/1442176051445.jpg"
+                                                alt="" class="testimonial__pfp-img"></div>Adam Banky
+                                    </span>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
+                                            fermentum ligula,
+                                            nec vestibulum augue sagittis cursus. Fusce sed consequat lectus, fermentum
+                                            congue neque.
+                                            Proin imperdiet nisl non neque lobortis pellentesque eget at enim.
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
+                                            fermentum ligula,
+                                            nec vestibulum augue sagittis cursus. Fusce sed consequat lectus, fermentum
+                                            congue neque.
+                                            Proin imperdiet nisl non neque lobortis pellentesque eget at enim.
+                                            Vestibulum consequat
+                                            lacus dolor, at tempus arcu convallis vitae. In dignissim hendrerit mi eu
+                                            ultricies. Proin
+                                            justo elit, tristique a est ac, venenatis venenatis risus. Suspendisse ac
+                                            porta odio.
+                                            Maecenas egestas blandit quam, in feugiat dolor tincidunt vel. Suspendisse
+                                            sem massa, dictum
+                                            vel sagittis sit amet, vehicula tempus quam. Donec sed orci quis velit
+                                            faucibus rhoncus.
+                                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                            cubilia curae;
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
+                                            fermentum ligula,
+                                            nec vestibulum augue sagittis cursus. Fusce sed consequat lectus, fermentum
+                                            congue neque.
+                                            Proin imperdiet nisl non neque lobortis pellentesque eget at enim.
+                                            Vestibulum consequat
+                                            lacus dolor, at tempus arcu convallis vitae. In dignissim hendrerit mi eu
+                                            ultricies. Proin
+                                            justo elit, tristique a est ac, venenatis venenatis risus. Suspendisse ac
+                                            porta odio.
+                                            Maecenas egestas blandit quam, in feugiat dolor tincidunt vel. Suspendisse
+                                            sem massa, dictum
+                                            vel sagittis sit amet, vehicula tempus quam. Donec sed orci quis velit
+                                            faucibus rhoncus.
+                                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                            cubilia curae;
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
+                                            fermentum ligula,
+                                            nec vestibulum augue sagittis cursus. Fusce sed consequat lectus, fermentum
+                                            congue neque.
+                                            Proin imperdiet nisl non neque lobortis pellentesque eget at enim.
+                                            Vestibulum consequat
+                                            lacus dolor, at tempus arcu convallis vitae. In dignissim hendrerit mi eu
+                                            ultricies. Proin
+                                            justo elit, tristique a est ac, venenatis venenatis risus. Suspendisse ac
+                                            porta odio.
+                                            Maecenas egestas blandit quam, in feugiat dolor tincidunt vel. Suspendisse
+                                            sem massa, dictum
+                                            vel sagittis sit amet, vehicula tempus quam. Donec sed orci quis velit
+                                            faucibus rhoncus.
+                                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                            cubilia curae;
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
+                                            fermentum ligula,
+                                            nec vestibulum augue sagittis cursus. Fusce sed consequat lectus, fermentum
+                                            congue neque.
+                                            Proin imperdiet nisl non neque lobortis pellentesque eget at enim.
+                                            Vestibulum consequat
+                                            lacus dolor, at tempus arcu convallis vitae. In dignissim hendrerit mi eu
+                                            ultricies. Proin
+                                            justo elit, tristique a est ac, venenatis venenatis risus. Suspendisse ac
+                                            porta odio.
+                                            Maecenas egestas blandit quam, in feugiat dolor tincidunt vel. Suspendisse
+                                            sem massa, dictum
+                                            vel sagittis sit amet, vehicula tempus quam. Donec sed orci quis velit
+                                            faucibus rhoncus.
+                                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                            cubilia curae;
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
+                                            fermentum ligula,
+                                            nec vestibulum augue sagittis cursus. Fusce sed consequat lectus, fermentum
+                                            congue neque.
+                                            Proin imperdiet nisl non neque lobortis pellentesque eget at enim.
+                                            Vestibulum consequat
+                                            lacus dolor, at tempus arcu convallis vitae. In dignissim hendrerit mi eu
+                                            ultricies. Proin
+                                            justo elit, tristique a est ac, venenatis venenatis risus. Suspendisse ac
+                                            porta odio.
+                                            Maecenas egestas blandit quam, in feugiat dolor tincidunt vel. Suspendisse
+                                            sem massa, dictum
+                                            vel sagittis sit amet, vehicula tempus quam. Donec sed orci quis velit
+                                            faucibus rhoncus.
+                                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                            cubilia curae;
+                                        </blockquote>
+                                    </div>
+                                    <span class="testimonial__author">
+                                        <div class="testimonial__author-pfp"><img src="./dist/img/KAYLEY.jpg" alt=""
+                                                class="testimonial__pfp-img"></div>Kayley
+                                    </span>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            8 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
+                                            fermentum ligula,
+                                            nec vestibulum augue sagittis cursus. Fusce sed consequat lectus, fermentum
+                                            congue neque.
+                                            Proin imperdiet nisl non neque lobortis pellentesque eget at enim.
+                                            Vestibulum consequat
+                                            lacus dolor, at tempus arcu convallis vitae. In dignissim hendrerit mi eu
+                                            ultricies. Proin
+                                            justo elit, tristique a est ac, venenatis venenatis risus. Suspendisse ac
+                                            porta odio.
+                                            Maecenas egestas blandit quam, in feugiat dolor tincidunt vel. Suspendisse
+                                            sem massa, dictum
+                                            vel sagittis sit amet, vehicula tempus quam. Donec sed orci quis velit
+                                            faucibus rhoncus.
+                                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                            cubilia curae;
+                                        </blockquote>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+            <div class="l-container">
+                <section class="section">
+                    <div class="l-flex">
+                        <!-- <div class="areas">
+                            <h2 class="section__title section__title--blue">Local Areas Include</h2>
+                            <div class="areas__content l-flex">
+                                <ul class="areas__ul">
+                                    <li>Cuyahoga Falls</li>
+                                    <li>Akron</li>
+                                    <li>Fairlawn</li>
+                                    <li>Bath</li>
+                                    <li>Richfield</li>
+                                    <li>Peninsula</li>
+                                </ul>
+                                <ul class="areas__ul">
+                                    <li>Barberton</li>
+                                    <li>Stow</li>
+                                    <li>Munroe Falls</li>
+                                    <li>Kent</li>
+                                    <li>Tallmadge</li>
+                                    <li>Hudson</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <div class="pricing">
+                            <h2 class="section__title section__title--green">Pricing Overview</h2>
+                            <div class="pricing__content">
+                                <p>In-person and virtual sessions available:</p>
+                                <ul class="pricing__ul">
+                                    <li>30 minutes</li>
+                                    <li>60 minutes</li>
+                                    <li>Prices starting at $50/session</li>
+                                </ul>
+                                <!-- <a href="contact.html" class="pricing__cta">Contact us for more information</a> -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <div class="back-to-top"></div>
+
+        <footer class="footer">
+            <!-- <video id="hero-video" autoplay muted loop playsinline poster="fallback.jpg">
+                <source src="dist/img/kidsblocks.mp4" type="video/mp4">
+
+            </video> -->
+            <img class="footer__overlayBG" src="./dist/img/beyondspeecholdhero.png" alt="Beyond Speech Collage">
+            <div class="footer__overlay"></div>
+            <div class="footer__inner">
+                <div class="l-container">
+                    <div class="l-flex">
+                        <div>
+                            <nav class="footer-nav">
+                                <li><a href="team.html" class="footer-nav__link">Our Team</a></li>
+                                <li><a href="stc.html" class="footer-nav__link">Spelling to Communicate</a></li>
+                                <li><a href="bsi.html" class="footer-nav__link">Beyond Speech Initiative</a></li>
+                                <li><a href="faq.html" class="footer-nav__link">FAQs</a></li>
+                                <li><a href="contact.html"
+                                        class="footer-nav__link footer-nav__link--contact">Contact</a></li>
+
+                            </nav>
+                            <div class="footer__content">
+                                <p>Beyond Speech Therapy Center LLC</p>
+                                <p>37 S. Main St.</p>
+                                <p>Munroe Falls, OH 44262</p>
+                                <p>(330) 299-5121</p>
+                                <p>COMING SOON: COLUMBUS LOCATION!</p>
+                                <i title="facebook" class="fa-brands fa-square-facebook footer__fb-icon"></i>
+                                <img style="display: block;
+  width: 200px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 10px;" src="./dist/img/cccslp.png" alt="">
+                                <div class="footer__tagline">© 2023 by Beyond Speech Therapy LLC</div>
+
+                            </div>
+                        </div>
+
+                        <div class="footer__map">
+                            <iframe width="600" height="470" style="border:0" loading="lazy" allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY
+                                &q=37+S+Main+St+Munroe Falls+OH44262">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div title="Back To Top" id="btt" onclick="topFunction()" class="btt">
+                <div class="btt__inner"><i class="fa-solid fa-chevron-up"></i></div>
+            </div>
+
+        </footer>
+    </div>
+
+
+
+
+
+
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./dist/scripts/scripts-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://kit.fontawesome.com/fb218ddc57.js" crossorigin="anonymous"></script>
+
+    <script>
+        new Splide('.splide', {
+            type: 'loop',
+            perPage: 4,
+            breakpoints: {
+                900: {
+                    perPage: 1,
+                },
+                1400: {
+                    perPage: 2
+                }
+            },
+            // perMove: 1, 
+            // autoplay: true,
+            // pauseOnHover: false,
+            autoScroll: {
+                speed: 1,
+            }
+
+        }).mount(window.splide.Extensions);
+
+
+    </script>
+
+    <script>
+        // Wait for all assets (images, scripts, etc.) to be fully loaded
+        window.addEventListener("load", function () {
+
+            // Start a 3000 millisecond (3 second) timer
+            setTimeout(function () {
+                // --- Code inside this block will run exactly 3 seconds later ---
+
+                // 1. Get the preloader element
+                const preloader = document.getElementById("preloader");
+
+                // 2. Hide the preloader 
+                if (preloader) {
+                    // e.g., preloader.style.opacity = '0'; 
+                    // Then perhaps use another setTimeout or CSS transition end event
+                    // to set display: none after an animation finishes, 
+                    // but for simplicity here we just set display: none immediately
+                    preloader.classList.add("preloader--fadeOut");
+                }
+
+                // 3. Re-enable scrolling by removing the 'no-scroll' class from the body
+                document.body.classList.remove("loading");
+
+                // --- You can place any other code that should run at this delayed time here ---
+                console.log("3 seconds after load, scrolling is now enabled and preloader is hidden.");
+
+            }, 2000); // 3000 milliseconds = 3 seconds
+        });
+
+        <li></li>
+
+
+    </script>
+</body>
+
+</html>
