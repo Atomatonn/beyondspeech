@@ -629,8 +629,9 @@ for all ages">
                                     </span>
                                 </li>
     `;
-                container.innerHTML += reviewHTML;
+                reviewsHTML += reviewHTML;
             });
+            container.innerHTML = reviewsHTML;
         }
 
         // Call the function on page load
