@@ -19,7 +19,15 @@ for all ages">
     <link rel="icon" type="image/png" href="./dist/img/General/favicon.ico">
     <!-- <script src="https://www.google.com/recaptcha/api.js?render=SECRET_KEY_HERE"></script> -->
     <script src="https://kit.fontawesome.com/fb218ddc57.js" crossorigin="anonymous"></script>
-
+    <script type="module">
+        async function initMap() {
+            const { Map } = await google.maps.importLibrary("maps");
+            const { Place } = await google.maps.importLibrary("places");
+            // Your code here, e.g., set up autocomplete
+        }
+        initMap();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY"></script>
 </head>
 
 <body>
@@ -84,7 +92,7 @@ for all ages">
         <main>
             <div class="l-container">
                 <section class="section section--interior">
-                    <h2 class="section__title section__title--blue">What is Spelling to Communicate?</h2>
+                    <h2 class="section__title ">What is Spelling to Communicate?</h2>
 
                     <p>
                         Spelling to Communicate (S2C) is an alternative form of communication for individuals who cannot
@@ -197,10 +205,10 @@ for all ages">
 
                     </div>
                     <br><br>
-                    <h3 class="section__title section__title--blue">What is Apraxia?</h3>
+                    <h3 class="section__title">What is Apraxia?</h3>
 
                     <p>
-                        Individuals with Apraxia know what they want to say or do. They ofen cannot get their body to
+                        Individuals with Apraxia know what they want to say or do. They often cannot get their body to
                         "listen" to what their brain is telling it to say or do.
                     </p>
                     <p>* Many individuals who exhibit full-body Apraxis do not have a formal diagnosis of apracis*
@@ -208,7 +216,7 @@ for all ages">
                     </p>
 
                     <br><br>
-                    <h3 class="section__title section__title--blue">Useful Links</h3>
+                    <h3 class="section__title">Useful Links</h3>
                     <ul class="usefulLinks__ul">
                         <li class="usefulLinks__li"><a target="_blank"
                                 href="https://www.youtube.com/watch?v=N2iv90TmO9M&t=110s" class="section__link">Overview
@@ -246,14 +254,35 @@ for all ages">
                                 Speech, Language, & Hearing Association's Annual Conference 2022: SLPs as AAC
                                 Gatekeepers | CommunicationFIRST </a></li>
                     </ul>
+                    <h4 class="section__title section__title--small">Research to Support Spelled Communications</h4>
+                    <ul class="usefulLinks__ul">
+                        <li class="usefulLinks__li"><a target="_blank"
+                                href="https://www.nature.com/articles/s41598-020-64553-9?fbclid=IwAR3WRbfO7OSojDK1X3a2FnsC54QmIHNiRfMtREC7IRtl45B1zM_j9IBKwr8"
+                                class="section__link">Eye-tracking reveals agency in assisted autistic communication |
+                                Scientific Reports (nature.com) </a></li>
 
+                        <li class="usefulLinks__li"><a target="_blank"
+                                href="https://journals.sagepub.com/doi/10.1177/13623613241230709?fbclid=IwY2xjawFz6rlleHRuA2FlbQIxMQABHVg-pWPD6NW7R25em40nK0d8tM6YeBrI0tnxNQClOW1cDXe-x0TG38ilcA_aem_AGPYVFkO0mpJiDMWL6occQ"
+                                class="section__link">Literacy in nonspeaking autistic people - Vikram K Jaswal, Andrew
+                                J Lampi, Kayden M Stockwell, 2024 (sagepub.com) </a></li>
 
-                    <br><br>
-                    <h3 class="section__title section__title--blue">How Spelling to Communicate is Different</h3>
-                    <span>Samantha Fox M.A., CCC-SLP</span>
-                    <p>
+                    </ul>
+                    <h4 class="section__title section__title--small">Anecdotal Evidence from families & professionals:
+                    </h4>
+                    <p>Over 150 peer-reviewed articles supporting spelling methodologies that lead to typing can be
+                        found here:</p>
+                    <ul class="usefulLinks__ul">
+                        <li class="usefulLinks__li"><a target="_blank"
+                                href="https://unitedforcommunicationchoice.org/wp-content/uploads/2021/01/UCC-Supportive-Research-Compilation-Version-6-012221.pdf"
+                                class="section__link">UCC-Supportive-Research-Compilation-Version-6-012221.pdf
+                                (unitedforcommunicationchoice.org) </a></li>
 
-                    </p>
+                        <br><br>
+                        <h3 class="section__title">How Spelling to Communicate is Different</h3>
+                        <span>Samantha Fox M.A., CCC-SLP</span>
+                        <p>
+
+                        </p>
 
 
                 </section>
@@ -305,7 +334,7 @@ for all ages">
   background: #fff;
   border-radius: 8px;
   margin-top: 10px;" src="./dist/img/cccslp.png" alt="">
-                                <div class="footer__tagline">© 2023 by Beyond Speech Therapy LLC</div>
+                                <div class="footer__tagline">© 2025 by Beyond Speech Therapy LLC</div>
 
                             </div>
                         </div>

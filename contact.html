@@ -19,6 +19,15 @@ for all ages">
     <!-- <script src="https://www.google.com/recaptcha/api.js?render=SECRET_KEY_HERE"></script> -->
     <script src="https://kit.fontawesome.com/fb218ddc57.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module">
+        async function initMap() {
+            const { Map } = await google.maps.importLibrary("maps");
+            const { Place } = await google.maps.importLibrary("places");
+            // Your code here, e.g., set up autocomplete
+        }
+        initMap();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY"></script>
 </head>
 
 <body>
@@ -84,7 +93,7 @@ for all ages">
             <div class="l-container">
                 <section class="section section--interior section--contact">
                     <div class="section--contact__col1">
-                        <h2 class="section__title section__title--blue">We'd love to speak with you!</h2>
+                        <h2 class="section__title ">We'd love to speak with you!</h2>
                         <p>We’d love to learn more about your family’s needs. Please complete this form and someone from
                             our
                             team will reach out to you soon.
@@ -170,8 +179,8 @@ for all ages">
                                 <label for="" class="form__non-text-label">Are you interested in services at our Munroe
                                     Falls
                                     office (near Akron) or our Columbus office?</label>
-                                <input type="radio" id="MunroFalls" name="location" value="munroe">
-                                <label class="form__radio-label" for="MunroeFalls">Munroe Falls</label><br>
+                                <input type="radio" id="munroefalls" name="location" value="munroe">
+                                <label class="form__radio-label" for="munroefalls">Munroe Falls</label><br>
                                 <input type="radio" id="columbus" name="location" value="columbus">
                                 <label class="form__radio-label" for="columbus">Columbus</label><br>
 
@@ -179,26 +188,26 @@ for all ages">
                             <div class="form__field">
                                 <label class="form__radio-label" for="" class="form__non-text-label">How did you hear
                                     about us?</label>
-                                <input type="radio" id="MunroFalls" name="hear" value="munroe">
-                                <label class="form__radio-label" for="MunroeFalls">Friend/Family</label><br>
-                                <input type="radio" id="columbus" name="hear" value="columbus">
-                                <label class="form__radio-label" for="columbus">Online Search</label><br>
-                                <input type="radio" id="columbus" name="hear" value="columbus">
-                                <label class="form__radio-label" for="columbus">School/Pediatrician</label><br>
-                                <input type="radio" id="columbus" name="hear" value="columbus">
-                                <label class="form__radio-label" for="columbus">Other</label><br>
+                                <input type="radio" id="ff" name="hear" value="Friends/Family">
+                                <label class="form__radio-label" for="ff">Friend/Family</label><br>
+                                <input type="radio" id="os" name="hear" value="Online Search">
+                                <label class="form__radio-label" for="os">Online Search</label><br>
+                                <input type="radio" id="school" name="hear" value="School/Pediatrician">
+                                <label class="form__radio-label" for="school">School/Pediatrician</label><br>
+                                <input type="radio" id="other" name="hear" value="Other">
+                                <label class="form__radio-label" for="other">Other</label><br>
                             </div>
                             <div class="form__field">
                                 <label class="form__radio-label" for="" class="form__non-text-label">AWhen is a good
                                     time to contact you?</label>
-                                <input type="radio" id="MunroFalls" name="when" value="munroe">
-                                <label class="form__radio-label" for="MunroeFalls">Morning 9-12</label><br>
-                                <input type="radio" id="columbus" name="when" value="columbus">
-                                <label class="form__radio-label" for="columbus">Afternoon 12-4</label><br>
-                                <input type="radio" id="columbus" name="when" value="columbus">
-                                <label class="form__radio-label" for="columbus">Evening 4-7</label><br>
+                                <input type="radio" id="morning" name="when" value="morning">
+                                <label class="form__radio-label" for="morning">Morning 9-12</label><br>
+                                <input type="radio" id="afternoon" name="when" value="afternoon">
+                                <label class="form__radio-label" for="afternoon">Afternoon 12-4</label><br>
+                                <input type="radio" id="evening" name="when" value="evening">
+                                <label class="form__radio-label" for="evening">Evening 4-7</label><br>
                             </div>
-                            <div class="form__field" style="text-align: right;">
+                            <div class="form__field">
                                 <input class="form__input form__input--submit" type="submit" value="Submit" name="post">
 
                                 <p class="form__captcha-notice">This site is protected by reCAPTCHA and the Google
@@ -280,7 +289,7 @@ for all ages">
   background: #fff;
   border-radius: 8px;
   margin-top: 10px;" src="./dist/img/cccslp.png" alt="">
-                                <div class="footer__tagline">© 2023 by Beyond Speech Therapy LLC</div>
+                                <div class="footer__tagline">© 2025 by Beyond Speech Therapy LLC</div>
 
                             </div>
                         </div>

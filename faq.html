@@ -18,7 +18,15 @@ for all ages">
     <link rel="icon" type="image/png" href="./dist/img/General/favicon.ico">
     <!-- <script src="https://www.google.com/recaptcha/api.js?render=SECRET_KEY_HERE"></script> -->
     <script src="https://kit.fontawesome.com/fb218ddc57.js" crossorigin="anonymous"></script>
-
+    <script type="module">
+        async function initMap() {
+            const { Map } = await google.maps.importLibrary("maps");
+            const { Place } = await google.maps.importLibrary("places");
+            // Your code here, e.g., set up autocomplete
+        }
+        initMap();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY"></script>
 </head>
 
 <body>
@@ -81,7 +89,7 @@ for all ages">
         <main>
             <div class="l-container">
                 <section class="section section--interior">
-                    <h2 class="section__title section__title--blue">FAQ’s & Parent Resources </h2>
+                    <h2 class="section__title">FAQ’s & Parent Resources </h2>
 
                     <div class="accordion__container">
                         <div class="accordion__qa">
@@ -338,7 +346,7 @@ for all ages">
   background: #fff;
   border-radius: 8px;
   margin-top: 10px;" src="./dist/img/cccslp.png" alt="">
-                                <div class="footer__tagline">© 2023 by Beyond Speech Therapy LLC</div>
+                                <div class="footer__tagline">© 2025 by Beyond Speech Therapy LLC</div>
 
                             </div>
                         </div>

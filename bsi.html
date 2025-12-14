@@ -19,7 +19,15 @@ for all ages">
     <link rel="icon" type="image/png" href="./dist/img/General/favicon.ico">
     <!-- <script src="https://www.google.com/recaptcha/api.js?render=SECRET_KEY_HERE"></script> -->
     <script src="https://kit.fontawesome.com/fb218ddc57.js" crossorigin="anonymous"></script>
-
+    <script type="module">
+        async function initMap() {
+            const { Map } = await google.maps.importLibrary("maps");
+            const { Place } = await google.maps.importLibrary("places");
+            // Your code here, e.g., set up autocomplete
+        }
+        initMap();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY"></script>
 </head>
 
 <body>
@@ -81,6 +89,7 @@ for all ages">
         <main>
             <div class="l-container">
                 <section class="section section--interior">
+                    <img style="width: 500px; margin:0 auto;display: block;" src="./dist/img/bsi_img.jpg" alt="">
                     <h2 class="section__title section__title--blue">Inner Voices Unleashed. Communities Connected.</h2>
 
                     <p>
@@ -110,16 +119,16 @@ for all ages">
                     </p>
 
                     <br><br>
-                    <h2 class="section__title">S2C SCHOLARSHIPS</h2>
-                    <h3>Beyond Speech Initiative S2C Scholarship Program</h3>
+                    <h2 class="section__title section__title--blue">S2C SCHOLARSHIPS</h2>
+                    <h3 class="section__subtitle--blue">Beyond Speech Initiative S2C Scholarship Program</h3>
                     <p>We’re excited to introduce the Beyond Speech Initiative S2C Scholarship Program, designed to make
                         Spelling to Communicate (S2C) more accessible to those who need it most.</p>
-                    <h3>About the Scholarship</h3>
+                    <h3 class="section__subtitle--blue">About the Scholarship</h3>
                     <p>Our scholarship program is available for individuals and families who require financial
                         assistance to participate in S2C services. Funds are awarded bi-annually. The next application
                         deadline is <b>September 22nd for coverage October-March 2026.</b> No late submissions will be
                         accepted. </p>
-                    <h3>Eligibility Requirements</h3>
+                    <h3 class="section__subtitle--blue">Eligibility Requirements</h3>
                     <ul class="bsi__ul">
                         <li>The individual you are applying for must be 4 years of age or older.</li>
                         <li>Only parents or legal guardians may apply on behalf of their child/adult.</li>
@@ -129,7 +138,7 @@ for all ages">
                         <li>A communication partner must be available several days per week and committed to helping the
                             individual learn to effectively use spelling as their primary form of communication.</li>
                     </ul>
-                    <h3>Application Process</h3>
+                    <h3 class="section__subtitle--blue">Application Process</h3>
                     <p>To apply for the S2C Scholarship, simply email us at bsi@beyondspeechtherapycenter.com to request
                         the online application form. We’re happy to answer questions about the application/process. The
                         best way to contact us with questions is through the email above. </p>
@@ -187,7 +196,7 @@ for all ages">
   background: #fff;
   border-radius: 8px;
   margin-top: 10px;" src="./dist/img/cccslp.png" alt="">
-                                <div class="footer__tagline">© 2023 by Beyond Speech Therapy LLC</div>
+                                <div class="footer__tagline">© 2025 by Beyond Speech Therapy LLC</div>
 
                             </div>
                         </div>
