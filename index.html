@@ -631,7 +631,25 @@ for all ages">
             });
             container.innerHTML = reviewsHTML;
             // After container.innerHTML = reviewsHTML;
-            new Splide('.splide').mount();
+            new Splide('.splide', {
+                type: 'loop',
+                perPage: 4,
+                breakpoints: {
+                    900: {
+                        perPage: 1,
+                    },
+                    1400: {
+                        perPage: 2
+                    }
+                },
+                // perMove: 1, 
+                // autoplay: true,
+                // pauseOnHover: false,
+                autoScroll: {
+                    speed: 1,
+                }
+
+            }).mount(window.splide.Extensions);
         }
 
         // Call the function on page load
