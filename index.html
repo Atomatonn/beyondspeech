@@ -563,9 +563,6 @@ for all ages">
         }).mount(window.splide.Extensions);
 
 
-    </script>
-
-    <script>
         // Wait for all assets (images, scripts, etc.) to be fully loaded
         window.addEventListener("load", function () {
 
@@ -634,7 +631,7 @@ for all ages">
             });
             container.innerHTML = reviewsHTML;
             // After container.innerHTML = reviewsHTML;
-            splide.refresh();
+            new Splide('.splide').mount();
         }
 
         // Call the function on page load
