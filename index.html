@@ -598,7 +598,7 @@ for all ages">
                 reviews_sort: 'newest'
             };
 
-            const service = new google.maps.places.Place({ id: 'ChIJg43FLcEnMYgRx-Bn_r-uBEc' }, document.createElement('div'));
+            const service = new google.maps.places.PlacesService(document.createElement('div'));
 
             service.getDetails(request, (place, status) => {
                 if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews) {
@@ -653,7 +653,10 @@ for all ages">
         }
 
         // Call the function on page load
-        window.onload = initReviews;
+        // window.onload = initReviews;
+        window.addEventListener("load", function () {
+            initReviews();
+        });
 
 
     </script>
