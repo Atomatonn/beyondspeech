@@ -25,7 +25,16 @@ for all ages">
         src="https://places.googleapis.com/v1/places/GyuEmsRBfy61i59si0?fields=addressComponents&key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY">
         </script> -->
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY"></script>
+    <script type="module">
+        async function initMap() {
+            const { Map } = await google.maps.importLibrary("maps");
+            const { Place } = await google.maps.importLibrary("places");
+            // Your code here, e.g., set up autocomplete
+        }
+        initMap();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY"></script>
+
 
     <style>
         .loading {
