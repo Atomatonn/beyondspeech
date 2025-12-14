@@ -633,6 +633,10 @@ for all ages">
                 reviewsHTML += reviewHTML;
             });
             container.innerHTML = reviewsHTML;
+            // After container.innerHTML = reviewsHTML;
+            if (typeof Splide !== 'undefined') {
+                new Splide('.splide').mount();  // Or refresh your existing instance
+            }
         }
 
         // Call the function on page load
