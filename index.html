@@ -597,7 +597,8 @@ for all ages">
         function initReviews() {
             const request = {
                 placeId: 'ChIJg43FLcEnMYgRx-Bn_r-uBEc',
-                fields: ['reviews', 'rating', 'user_ratings_total']
+                fields: ['reviews', 'rating', 'user_ratings_total'],
+                reviews_sort: 'newest'
             };
 
             const service = new google.maps.places.PlacesService(document.createElement('div'));
