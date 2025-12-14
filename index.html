@@ -21,6 +21,12 @@ for all ages">
     <!-- <script src="https://www.google.com/recaptcha/api.js?render=SECRET_KEY_HERE"></script> -->
     <script src="https://kit.fontawesome.com/fb218ddc57.js" crossorigin="anonymous"></script>
 
+    <!-- <script async
+        src="https://places.googleapis.com/v1/places/GyuEmsRBfy61i59si0?fields=addressComponents&key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY">
+        </script> -->
+
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjnlxb0BK1Ny4FGmIY_4ZMGu28qYk7urY"></script>
+
     <style>
         .loading {
             overflow: hidden;
@@ -35,7 +41,14 @@ for all ages">
 
 
     <div class="mobile-nav js-mobile-menu">
-        <div class="mobile-nav__close js-close"><i class="fa-solid fa-xmark"></i></div>
+        <div class="main-nav__mobile-wrapper">
+
+            <div class="main-nav__link main-nav__link main-nav__link--mode main-nav__link--mobile js-lightmode">
+                <div class="main-nav__link--mode__icon js-search-btn"><i class="fa-solid fa-lightbulb"></i>
+                </div>
+            </div>
+            <div class="mobile-nav__close js-close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
         <div class="mobile-nav__inner">
             <li><a href="team.html" class="mobile-nav__link">Our Team</a></li>
             <li><a href="stc.html" class="mobile-nav__link">Spelling to Communicate</a></li>
@@ -82,10 +95,7 @@ for all ages">
                 </nav>
                 <div class="main-nav__mobile-wrapper">
 
-                    <div class="main-nav__link main-nav__link--mode main-nav__link--mobile js-lightmode">
-                        <div class="main-nav__link--mode__icon js-search-btn"><i class="fa-solid fa-lightbulb"></i>
-                        </div>
-                    </div>
+
                     <div class="main-nav__hamburger js-hamburger"><i class="fa-solid fa-bars"></i></div>
 
                 </div>
@@ -187,7 +197,7 @@ for all ages">
                         </div> -->
                 </section>
                 <section class="section">
-                    <h2 class="section__title section__title--blue">Our Areas of Expertise.</h2>
+                    <h2 class="section__title ">Our Areas of Expertise.</h2>
                     <div class="l-flex aoe__container">
                         <div class="aoe__card">
                             <div class="aoe__img">
@@ -229,8 +239,8 @@ for all ages">
 
                     <section class="splide" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
+                            <ul class="splide__list js-reviews-container">
+                                <!-- <li class="splide__slide">
                                     <div class="testimonial__card">
                                         <blockquote>
                                             1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra
@@ -403,7 +413,7 @@ for all ages">
                                             cubilia curae;
                                         </blockquote>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </section>
@@ -575,7 +585,47 @@ for all ages">
             }, 2000); // 3000 milliseconds = 3 seconds
         });
 
+        function initReviews() {
+            const request = {
+                placeId: 'ChIJg43FLcEnMYgRx-Bn_r-uBEc',
+                fields: ['reviews', 'rating', 'user_ratings_total']
+            };
 
+            const service = new google.maps.places.PlacesService(document.createElement('div'));
+
+            service.getDetails(request, (place, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews) {
+                    displayReviews(place.reviews);
+                }
+            });
+        }
+
+        function displayReviews(reviews) {
+            const container = document.querySelector('.js-reviews-container');
+
+            reviews.forEach(review => {
+                // Create your custom markup for each review
+                const reviewHTML = `
+   
+      <li class="splide__slide">
+                                    <div class="testimonial__card">
+                                        <blockquote>
+                                            ${review.text}
+                                        </blockquote>
+
+                                    </div>
+                                    <span class="testimonial__author">
+                                        <div class="testimonial__author-pfp"><img src="${review.profile_photo_url}"
+                                                alt="" class="testimonial__pfp-img"></div>${review.author_name}
+                                    </span>
+                                </li>
+    `;
+                container.innerHTML += reviewHTML;
+            });
+        }
+
+        // Call the function on page load
+        window.onload = initReviews;
 
 
     </script>
