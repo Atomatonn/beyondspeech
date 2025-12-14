@@ -611,7 +611,7 @@ for all ages">
 
         function displayReviews(reviews) {
             const container = document.querySelector('.js-reviews-container');
-
+            let reviewsHTML = '';
             reviews.forEach(review => {
                 // Create your custom markup for each review
                 const reviewHTML = `
