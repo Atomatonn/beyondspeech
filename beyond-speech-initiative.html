@@ -21,6 +21,11 @@ for all ages"
 
     <link rel="stylesheet" href="./dist/css/styles.css" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"
+    />
+
+    <link
       rel="shortcut icon"
       href="./dist/img/Beyond-speech-icon.png"
       type="image/x-icon"
@@ -122,27 +127,61 @@ for all ages"
           </div>
         </div>
       </header>
+      <div class="hero hero--interior hero--bsi">
+        <video
+          id="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="fallback.jpg"
+        >
+          <source src="dist/img/kidsblocks_low.webm" type="video/mp4" />
+        </video>
+        <!-- <img src="./dist/img/HERO3.png" alt="" id="hero-video"> -->
+        <div class="hero__overlay"></div>
+        <div class="l-container l-flex hero__inner">
+          <div class="hero__image">
+            <!-- <img src="./dist/img/TESTCHAR.png" alt=""> -->
+          </div>
 
+          <div class="hero__opener">
+            <h1 class="hero__title">Beyond Speech Initiative</h1>
+          </div>
+        </div>
+      </div>
       <main>
         <div class="l-container">
           <section class="section section--interior">
-            <img
-              style="width: 500px; margin: 0 auto; display: block"
-              src="./dist/img/BSILogo.svg"
-              alt=""
-            />
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div style="width: 50%">
+                <img
+                  style="width: 500px; margin: 0 auto; display: block"
+                  src="./dist/img/BSILogo.svg"
+                  alt=""
+                />
+              </div>
+              <div style="width: 50%">
+                <p>
+                  Beyond Speech Initiative, Inc. is a 501(c)(3) nonprofit
+                  organization (T.I.N. 99-1280472) dedicated to empowering
+                  Nonspeaking individuals through access to alternative
+                  communication, public education, and building supportive
+                  communities for Nonspeaking, Minimally Speaking, and
+                  Unreliably Speaking individuals and their families.
+                </p>
+              </div>
+            </div>
+
             <h2 class="section__title section__title--blue">
               Inner Voices Unleashed. Communities Connected.
             </h2>
-
-            <p>
-              Beyond Speech Initiative, Inc. is a 501(c)(3) nonprofit
-              organization (T.I.N. 99-1280472) dedicated to empowering
-              Nonspeaking individuals through access to alternative
-              communication, public education, and building supportive
-              communities for Nonspeaking, Minimally Speaking, and Unreliably
-              Speaking individuals and their families.
-            </p>
 
             <p>
               Our mission is to empower Nonspeaking, Minimally Speaking, and
@@ -178,62 +217,139 @@ for all ages"
             </p>
 
             <br /><br />
-            <h2 class="section__title section__title--blue">
-              S2C SCHOLARSHIPS
-            </h2>
-            <h3 class="section__subtitle--blue">
-              Beyond Speech Initiative S2C Scholarship Program
-            </h3>
-            <p>
-              We’re excited to introduce the Beyond Speech Initiative S2C
-              Scholarship Program, designed to make Spelling to Communicate
-              (S2C) more accessible to those who need it most.
-            </p>
-            <h3 class="section__subtitle--blue">About the Scholarship</h3>
-            <p>
-              Our scholarship program is available for individuals and families
-              who require financial assistance to participate in S2C services.
-              Funds are awarded bi-annually. The next application deadline is
-              <b>September 22nd for coverage October-March 2026.</b> No late
-              submissions will be accepted.
-            </p>
-            <h3 class="section__subtitle--blue">Eligibility Requirements</h3>
-            <ul class="bsi__ul">
-              <li>
-                The individual you are applying for must be 4 years of age or
-                older.
-              </li>
-              <li>
-                Only parents or legal guardians may apply on behalf of their
-                child/adult.
-              </li>
-              <li>You and your S2C Practitioner must reside in Ohio.</li>
-              <li>
-                Your S2C Practitioner must either be a Speech-Language
-                Pathologist (SLP), an Occupational Therapist (OT), or be
-                supervised by an SLP or OT.
-              </li>
-              <li>
-                A communication partner must be available several days per week
-                and committed to helping the individual learn to effectively use
-                spelling as their primary form of communication.
-              </li>
-            </ul>
-            <h3 class="section__subtitle--blue">Application Process</h3>
-            <p>
-              To apply for the S2C Scholarship, simply email us at
-              bsi@beyondspeechtherapycenter.com to request the online
-              application form. We’re happy to answer questions about the
-              application/process. The best way to contact us with questions is
-              through the email above.
-            </p>
-            <p>
-              Ready to apply? Contact us at
-              <a href="mailto:bsi@beyondspeechtherapycenter.com"
-                >bsi@beyondspeechtherapycenter.com</a
-              >
-              today to request an application!
-            </p>
+            <iframe
+              width="560"
+              height="515"
+              style="width: 100%; margin-bottom: 50px"
+              src="https://www.youtube.com/embed/CiFze40UGco"
+              class="fade-in-element"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <br /><br />
+
+            <section class="bsi__media fade-in-element">
+              <div class="bsi__media-col">
+                <h2 class="section__title section__title--blue">
+                  Donate Today:
+                </h2>
+
+                <p>
+                  75%+ of funds directly support scholarships for Nonspeaking
+                  Individuals to work with certified practitioners and build
+                  their spelled communication skills.
+                </p>
+
+                <p>
+                  Up to 15% of funds go toward community events that bring
+                  together local Nonspeaking individuals and their families.
+                </p>
+
+                <p>
+                  Up to 10% of funds are reserved for future growth—helping us
+                  expand events, education, and fundraising opportunities.
+                </p>
+
+                <p>
+                  Our Board is made up of 100% volunteers, ensuring that
+                  donations go where they matter most.
+                </p>
+              </div>
+              <div class="bsi__media-col">
+                <div id="chart-wrap"></div>
+                <p>
+                  We have awarded over $50,000 in scholarships between 2024 and
+                  2025.
+                </p>
+              </div>
+            </section>
+            <section class="fade-in-element">
+              <h2 class="section__title section__title--blue">
+                S2C Scholarships
+              </h2>
+              <h3 class="section__subtitle--blue">
+                Scholarship Application Periods
+              </h3>
+              <ul class="bsi__ul">
+                <li>October–March</li>
+                <li>April–September</li>
+              </ul>
+              <p>
+                Families can email
+                <a href="mailto:bsi@beyondspeechtherapycenter.com"
+                  >bsi@beyondspeechtherapycenter.com</a
+                >
+                for deadline dates or follow Beyond Speech Initiative on
+                <a href="https://www.facebook.com/BeyondSpeech/" target="_blank"
+                  >Facebook</a
+                >
+                or
+                <a
+                  href="https://www.instagram.com/beyondspeechtherapycenter/"
+                  target="_blank"
+                  >Instagram</a
+                >
+                for application updates.
+              </p>
+              <h3 class="section__subtitle--blue">
+                Beyond Speech Initiative S2C Scholarship Program
+              </h3>
+              <p>
+                We’re excited to introduce the Beyond Speech Initiative S2C
+                Scholarship Program, designed to make Spelling to Communicate
+                (S2C) more accessible to those who need it most.
+              </p>
+              <h3 class="section__subtitle--blue">About the Scholarship</h3>
+              <p>
+                Our scholarship program is available for individuals and
+                families who require financial assistance to participate in S2C
+                services. Funds are awarded bi-annually. The next application
+                deadline is
+                <b>September 22nd for coverage October-March 2026.</b> No late
+                submissions will be accepted.
+              </p>
+              <h3 class="section__subtitle--blue">Eligibility Requirements</h3>
+              <ul class="bsi__ul">
+                <li>
+                  The individual you are applying for must be 4 years of age or
+                  older.
+                </li>
+                <li>
+                  Only parents or legal guardians may apply on behalf of their
+                  child/adult.
+                </li>
+                <li>You and your S2C Practitioner must reside in Ohio.</li>
+                <li>
+                  Your S2C Practitioner must either be a Speech-Language
+                  Pathologist (SLP), an Occupational Therapist (OT), or be
+                  supervised by an SLP or OT.
+                </li>
+                <li>
+                  A communication partner must be available several days per
+                  week and committed to helping the individual learn to
+                  effectively use spelling as their primary form of
+                  communication.
+                </li>
+              </ul>
+              <h3 class="section__subtitle--blue">Application Process</h3>
+              <p>
+                To apply for the S2C Scholarship, simply email us at
+                bsi@beyondspeechtherapycenter.com to request the online
+                application form. We’re happy to answer questions about the
+                application/process. The best way to contact us with questions
+                is through the email above.
+              </p>
+              <p>
+                Ready to apply? Contact us at
+                <a href="mailto:bsi@beyondspeechtherapycenter.com"
+                  >bsi@beyondspeechtherapycenter.com</a
+                >
+                today to request an application!
+              </p>
+            </section>
           </section>
 
           <section></section>
@@ -288,15 +404,43 @@ for all ages"
                   </li>
                 </nav>
                 <div class="footer__content">
-                  <p>Beyond Speech Therapy Center LLC</p>
-                  <p>37 S. Main St.</p>
-                  <p>Munroe Falls, OH 44262</p>
-                  <p>(330) 299-5121</p>
-                  <p>COMING SOON: COLUMBUS LOCATION!</p>
-                  <i
-                    title="facebook"
-                    class="fa-brands fa-square-facebook footer__fb-icon"
-                  ></i>
+                  <div class="footer__logo">
+                    <a href="/beyondspeech/"
+                      ><img
+                        src="dist\img\logo.png"
+                        alt=""
+                        class="footer__logo-img"
+                    /></a>
+                  </div>
+
+                  <div class="footer__info-block">
+                    <p class="footer__heading">Primary Location:</p>
+                    <p>Munroe Falls, OH - 37 S. Main St. Suite 1</p>
+                  </div>
+
+                  <div class="footer__info-block">
+                    <p class="footer__heading">Also Serving:</p>
+                    <p>Columbus, OH - Upper Arlington, 2929 Kenny Suite 155</p>
+                  </div>
+
+                  <div class="footer__info-block">
+                    <p class="footer__heading">Phone:</p>
+                    <p>(330) 299-5121</p>
+                  </div>
+
+                  <div class="footer__info-block">
+                    <a
+                      title="Facebook"
+                      class="footer__link"
+                      href="https://www.facebook.com/BeyondSpeech/"
+                      target="_blank"
+                    >
+                      <i
+                        title="facebook"
+                        class="fa-brands fa-square-facebook footer__fb-icon"
+                      ></i>
+                    </a>
+                  </div>
                   <img
                     style="
                       display: block;
@@ -304,7 +448,7 @@ for all ages"
                       padding: 10px;
                       background: #fff;
                       border-radius: 8px;
-                      margin-top: 10px;
+                      margin-top: 50px;
                     "
                     src="./dist/img/cccslp.png"
                     alt=""
@@ -349,5 +493,218 @@ for all ages"
       src="https://kit.fontawesome.com/fb218ddc57.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script>
+      const wrap = d3.select("#chart-wrap");
+      let wrapWidth = parseInt(wrap.style("width"));
+      let wrapHeight;
+      const src = "funding-data.csv";
+      const colorsArray = ["#408A99", "#0A3F4E", "#DBE7F7"];
+      const formatPerc = d3.format(".0%");
+      let width;
+      let height;
+      let total;
+      let pieRadius;
+      let pie;
+      let arc;
+
+      // Tooltip functions
+      const tooltipMouseMove = (d) => {
+        const xArc = arc.centroid(d)[0] + width / 3;
+        const yArc = arc.centroid(d)[1] + height / 3;
+
+        tooltipChart
+          .html(() => {
+            return `<div class="chart-tooltip-wrap">
+            <p>Percentage: ${formatPerc(d.value / total)}</p>
+              <p>${d.data.name}</p>
+           </div>
+          `;
+          })
+          .style("visibility", "visible")
+          .style("top", 0)
+          .style("left", 0)
+          .style("transform", `translate(${xArc + 200}px, ${yArc + 50}px)`);
+      };
+
+      const tooltipMouseOut = () => {
+        tooltipChart.style("visibility", "hidden");
+      };
+
+      // Pie
+      if (wrapWidth <= 479) {
+        width = 250;
+        height = 250;
+      } else {
+        width = 300;
+        height = 300;
+      }
+
+      pieRadius = Math.min(width / 2, height / 2);
+
+      pie = d3
+        .pie()
+        .value((d) => {
+          return d.value;
+        })
+        .padAngle(0.03);
+
+      arc = d3
+        .arc()
+        .outerRadius(pieRadius)
+        .innerRadius(pieRadius / 2);
+
+      // Animation function
+      const animate = (f) => {
+        f.innerRadius = 0;
+        let interp = d3.interpolate({ startAngle: 0, endAngle: 0 }, f);
+
+        return (t) => {
+          return arc(interp(t));
+        };
+      };
+
+      // SVG
+      const svg = wrap
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+      // SVG aria tags
+      svg.append("title").attr("id", "chart-title").html("Donut chart");
+
+      svg
+        .append("desc")
+        .attr("id", "chart-desc")
+        .html("Displays arbitrary values for items.");
+
+      svg.attr("aria-labelledby", "chart-title chart-desc");
+
+      tooltipChart = wrap
+        .append("div")
+        .attr("class", "chart-tooltip")
+        .style("visibility", "hidden");
+
+      const g = svg
+        .append("g")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("class", "group")
+        .style("transform", `translate(${width / 2}px, ${height / 2}px)`);
+
+      // Create chart
+      async function createDonut() {
+        const data = await d3.csv(src);
+        // Descending data
+        data.sort((a, b) => {
+          return d3.descending(+a.value, +b.value);
+        });
+        total = d3.sum(data, (d) => {
+          return d.value;
+        });
+
+        // Pie slices
+        const slices = g
+          .selectAll(".arc")
+          .data(pie(data))
+          .enter()
+          .append("path")
+          .attr("class", "slices")
+          .attr("fill", (d, i) => {
+            return colorsArray[i];
+          })
+          .on("mouseover", (event, d) => {
+            const f = d;
+            tooltipMouseMove(f);
+          })
+          .on("mouseout", () => {
+            tooltipMouseOut();
+          })
+          .transition()
+          .duration(1000)
+          .delay(100)
+          .attrTween("d", animate);
+
+        // Text values in slices
+        const text = g
+          .selectAll(".text")
+          .data(pie(data))
+          .enter()
+          .append("text")
+          .attr("transform", (d) => {
+            return `translate(${arc.centroid(d)})`;
+          })
+          .attr("class", "text")
+          .style("opacity", "0")
+          .text((d, i) => {
+            const percentage = d.value / total;
+            return percentage > 0.05 ? formatPerc(percentage) : ""; // hide if <5%
+          })
+          .transition()
+          .duration(300)
+          .delay(700)
+          .style("opacity", "1");
+
+        // Legend
+        const createLegend = (parent, data, cat, color) => {
+          parent
+            .append("div")
+            .attr("class", "legend")
+            .selectAll("div")
+            .data(data)
+            .enter()
+            .append("div")
+            .attr("class", "legend-group")
+            .html((d, i) => {
+              return `
+            <div class="legend-box" style="background-color: ${color[i]};"></div>
+            <p class="legend-label">${d[cat]}</p>
+          `;
+            });
+        };
+        createLegend(wrap, data, "name", colorsArray);
+      }
+      createDonut();
+
+      const resize = () => {
+        let wrapWidth = parseInt(wrap.style("width"));
+        if (wrapWidth <= 479) {
+          width = 250;
+          height = 250;
+        } else {
+          width = 300;
+          height = 300;
+        }
+
+        svg.attr("width", width).attr("height", height);
+
+        g.attr("width", width)
+          .attr("height", height)
+          .style("transform", `translate(${width / 2}px, ${height / 2}px)`);
+
+        pieRadius = Math.min(width / 2, height / 2);
+
+        arc = d3
+          .arc()
+          .outerRadius(pieRadius)
+          .innerRadius(pieRadius / 2);
+
+        d3.selectAll(".slices")
+          .attr("d", arc)
+          .on("mouseover", (event, d) => {
+            const f = d;
+            tooltipMouseMove(f);
+          })
+          .on("mouseout", () => {
+            tooltipMouseOut();
+          });
+
+        d3.selectAll(".text").attr("transform", (d) => {
+          return `translate(${arc.centroid(d)})`;
+        });
+      };
+
+      d3.select(window).on("resize", resize);
+    </script>
   </body>
 </html>

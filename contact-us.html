@@ -124,12 +124,34 @@ for all ages"
           </div>
         </div>
       </header>
+      <div class="hero hero--interior">
+        <video
+          id="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="fallback.jpg"
+        >
+          <source src="dist/img/kidsblocks_low.webm" type="video/mp4" />
+        </video>
+        <!-- <img src="./dist/img/HERO3.png" alt="" id="hero-video"> -->
+        <div class="hero__overlay"></div>
+        <div class="l-container l-flex hero__inner">
+          <div class="hero__image">
+            <!-- <img src="./dist/img/TESTCHAR.png" alt=""> -->
+          </div>
 
+          <div class="hero__opener">
+            <h1 class="hero__title">We'd love to speak with you!</h1>
+          </div>
+        </div>
+      </div>
       <main>
         <div class="l-container">
           <section class="section section--interior section--contact">
             <div class="section--contact__col1">
-              <h2 class="section__title">We'd love to speak with you!</h2>
+              <!-- <h2 class="section__title">We'd love to speak with you!</h2> -->
               <p>
                 We’d love to learn more about your family’s needs. Please
                 complete this form and someone from our team will reach out to
@@ -185,6 +207,7 @@ for all ages"
                   <input
                     id="phone"
                     type="tel"
+                    pattern="\(\d{3}\)-\d{3}-\d{4}"
                     name="phone"
                     class="form__input"
                     autocomplete="false"
@@ -229,8 +252,10 @@ for all ages"
                     data-multiselect="none"
                     >Which services are you interested in learning more about?
                     (please select all that apply): Please note: At this time,
-                    we are not able to accept student observations.</label
-                  >
+                    we are not able to accept student observations.
+                    <div class="form__req form__req--inline"></div>
+                  </label>
+
                   <div class="colors">
                     <label class="form__radio-label" tabindex="0"
                       ><input
@@ -276,20 +301,38 @@ for all ages"
                         type="checkbox"
                         value="Other"
                         name="services"
+                        class="js-other-check anchor"
                       />Other</label
                     >
                   </div>
                 </div>
+                <div class="form__field js-other-input" style="display: none">
+                  <label for="otherservice" class="form__label"
+                    >What service are you interested in?</label
+                  >
+                  <input
+                    id="otherservice"
+                    type="text"
+                    name="otherservice"
+                    class="form__input form__input--other"
+                    autocomplete="false"
+                  />
+                  <div class="form__border"></div>
+                  <div class="form__req"></div>
+                </div>
                 <div class="form__field">
                   <label for="" class="form__non-text-label"
                     >Are you interested in services at our Munroe Falls office
-                    (near Akron) or our Columbus office?</label
-                  >
+                    (near Akron) or our Columbus office?
+                    <div class="form__req form__req--inline"></div>
+                  </label>
+
                   <input
                     type="radio"
                     id="munroefalls"
                     name="location"
                     value="munroe"
+                    required
                   />
                   <label class="form__radio-label" for="munroefalls"
                     >Munroe Falls</label
@@ -299,6 +342,7 @@ for all ages"
                     id="columbus"
                     name="location"
                     value="columbus"
+                    required
                   />
                   <label class="form__radio-label" for="columbus"
                     >Columbus</label
@@ -309,13 +353,16 @@ for all ages"
                     class="form__non-text-label"
                     for=""
                     class="form__non-text-label"
-                    >How did you hear about us?</label
-                  >
+                    >How did you hear about us?
+                    <div class="form__req form__req--inline"></div>
+                  </label>
+
                   <input
                     type="radio"
                     id="ff"
                     name="hear"
                     value="Friends/Family"
+                    required
                   />
                   <label class="form__radio-label" for="ff">Friend/Family</label
                   ><br />
@@ -324,6 +371,7 @@ for all ages"
                     id="os"
                     name="hear"
                     value="Online Search"
+                    required
                   />
                   <label class="form__radio-label" for="os">Online Search</label
                   ><br />
@@ -332,23 +380,32 @@ for all ages"
                     id="school"
                     name="hear"
                     value="School/Pediatrician"
+                    required
                   />
                   <label class="form__radio-label" for="school"
                     >School/Pediatrician</label
                   ><br />
-                  <input type="radio" id="other" name="hear" value="Other" />
+                  <input
+                    type="radio"
+                    id="other"
+                    name="hear"
+                    value="Other"
+                    required
+                  />
                   <label class="form__radio-label" for="other">Other</label
                   ><br />
                 </div>
                 <div class="form__field">
                   <label for="" class="form__non-text-label"
-                    >When is a good time to contact you?</label
-                  >
+                    >When is a good time to contact you?
+                    <div class="form__req form__req--inline"></div>
+                  </label>
                   <input
                     type="radio"
                     id="morning"
                     name="when"
                     value="morning"
+                    required
                   />
                   <label class="form__radio-label" for="morning"
                     >Morning 9-12</label
@@ -358,6 +415,7 @@ for all ages"
                     id="afternoon"
                     name="when"
                     value="afternoon"
+                    required
                   />
                   <label class="form__radio-label" for="afternoon"
                     >Afternoon 12-4</label
@@ -367,6 +425,7 @@ for all ages"
                     id="evening"
                     name="when"
                     value="evening"
+                    required
                   />
                   <label class="form__radio-label" for="evening"
                     >Evening 4-7</label
@@ -446,15 +505,43 @@ for all ages"
                   </li>
                 </nav>
                 <div class="footer__content">
-                  <p>Beyond Speech Therapy Center LLC</p>
-                  <p>37 S. Main St.</p>
-                  <p>Munroe Falls, OH 44262</p>
-                  <p>(330) 299-5121</p>
-                  <p>COMING SOON: COLUMBUS LOCATION!</p>
-                  <i
-                    title="facebook"
-                    class="fa-brands fa-square-facebook footer__fb-icon"
-                  ></i>
+                  <div class="footer__logo">
+                    <a href="/beyondspeech/"
+                      ><img
+                        src="dist\img\logo.png"
+                        alt=""
+                        class="footer__logo-img"
+                    /></a>
+                  </div>
+
+                  <div class="footer__info-block">
+                    <p class="footer__heading">Primary Location:</p>
+                    <p>Munroe Falls, OH - 37 S. Main St. Suite 1</p>
+                  </div>
+
+                  <div class="footer__info-block">
+                    <p class="footer__heading">Also Serving:</p>
+                    <p>Columbus, OH - Upper Arlington, 2929 Kenny Suite 155</p>
+                  </div>
+
+                  <div class="footer__info-block">
+                    <p class="footer__heading">Phone:</p>
+                    <p>(330) 299-5121</p>
+                  </div>
+
+                  <div class="footer__info-block">
+                    <a
+                      title="Facebook"
+                      class="footer__link"
+                      href="https://www.facebook.com/BeyondSpeech/"
+                      target="_blank"
+                    >
+                      <i
+                        title="facebook"
+                        class="fa-brands fa-square-facebook footer__fb-icon"
+                      ></i>
+                    </a>
+                  </div>
                   <img
                     style="
                       display: block;
@@ -462,7 +549,7 @@ for all ages"
                       padding: 10px;
                       background: #fff;
                       border-radius: 8px;
-                      margin-top: 10px;
+                      margin-top: 50px;
                     "
                     src="./dist/img/cccslp.png"
                     alt=""
@@ -507,25 +594,47 @@ for all ages"
       src="https://kit.fontawesome.com/fb218ddc57.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/imask"></script>
 
     <script>
-      const phoneInput = document.getElementById("phone");
+      const element = document.getElementById("phone");
+      const maskOptions = {
+        mask: "(000)-000-0000",
+      };
+      const mask = IMask(element, maskOptions);
 
-      phoneInput.addEventListener("input", function (e) {
-        let value = e.target.value.replace(/\D/g, ""); // Remove non-digits
-        if (value.length > 10) value = value.slice(0, 10); // Max 10 digits
+      const checkboxes = document.querySelectorAll('input[name="services"]');
+      const anchor = document.querySelector(".anchor");
 
-        // Build formatted value
-        if (value.length >= 1)
-          value = "(" + value.slice(0, 3) + ") " + value.slice(3);
-        if (value.length >= 8) value = value.slice(0, 9) + "-" + value.slice(9);
+      function validateGroup() {
+        const anyChecked = [...checkboxes].some((cb) => cb.checked);
 
-        e.target.value = value;
-      });
+        if (anyChecked) {
+          anchor.setCustomValidity(""); // Valid
+          // errorDisplay.textContent = '';
+        } else {
+          anchor.setCustomValidity("Please select at least one option."); // Invalid
+          // errorDisplay.textContent = 'Please select at least one option.'; // Optional fallback
+        }
+      }
 
-      // Optional: On blur, add placeholder if empty
-      phoneInput.addEventListener("blur", function () {
-        if (this.value.length === 0) this.value = "";
+      // Run on change
+      checkboxes.forEach((cb) => cb.addEventListener("change", validateGroup));
+
+      // Initial check (e.g., if pre-checked)
+      validateGroup();
+
+      const otherCheck = document.querySelector(".js-other-check");
+      const otherInput = document.querySelector(".js-other-input");
+
+      otherCheck.addEventListener("change", () => {
+        if (otherInput.style.display === "none") {
+          otherInput.style.display = "block";
+          document.querySelector(".form__input--other").required = true;
+        } else {
+          otherInput.style.display = "none";
+          document.querySelector(".form__input--other").required = false;
+        }
       });
     </script>
   </body>
