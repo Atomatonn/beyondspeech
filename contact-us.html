@@ -391,9 +391,27 @@ for all ages"
                     name="hear"
                     value="Other"
                     required
+                    class="js-other-hear-check"
                   />
                   <label class="form__radio-label" for="other">Other</label
                   ><br />
+                </div>
+                <div
+                  class="form__field js-other-hear-input"
+                  style="display: none"
+                >
+                  <label for="otherhear" class="form__label"
+                    >How did you hear about us?</label
+                  >
+                  <input
+                    id="otherhear"
+                    type="text"
+                    name="otherhear"
+                    class="form__input form__input--other-hear"
+                    autocomplete="false"
+                  />
+                  <div class="form__border"></div>
+                  <div class="form__req"></div>
                 </div>
                 <div class="form__field">
                   <label for="" class="form__non-text-label"
@@ -618,6 +636,21 @@ for all ages"
         }
       }
 
+      window.onload = function () {
+        document.getElementById("form").reset();
+
+        const formLabels = document.querySelectorAll(".form__label");
+        const formInputs = document.querySelectorAll(".form__field");
+
+        formLabels.forEach((formLabel) => {
+          formLabel.classList.remove("form__label--focus");
+        });
+
+        formInputs.forEach((formInput) => {
+          formInput.classList.remove("form__field--valid");
+        });
+      };
+
       // Run on change
       checkboxes.forEach((cb) => cb.addEventListener("change", validateGroup));
 
@@ -628,13 +661,27 @@ for all ages"
       const otherInput = document.querySelector(".js-other-input");
 
       otherCheck.addEventListener("change", () => {
-        if (otherInput.style.display === "none") {
+        if (otherCheck.checked) {
           otherInput.style.display = "block";
           document.querySelector(".form__input--other").required = true;
         } else {
           otherInput.style.display = "none";
           document.querySelector(".form__input--other").required = false;
         }
+      });
+      const otherHearCheck = document.querySelectorAll("input[name='hear']");
+      const otherHearInput = document.querySelector(".js-other-hear-input");
+
+      otherHearCheck.forEach((hearCheck) => {
+        hearCheck.addEventListener("change", () => {
+          if (hearCheck.checked && hearCheck.value === "Other") {
+            otherHearInput.style.display = "block";
+            document.querySelector(".form__input--other-hear").required = true;
+          } else {
+            otherHearInput.style.display = "none";
+            document.querySelector(".form__input--other-hear").required = false;
+          }
+        });
       });
     </script>
   </body>
