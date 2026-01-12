@@ -153,21 +153,15 @@ for all ages"
       <main>
         <div class="l-container">
           <section class="section section--interior">
-            <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              "
-            >
-              <div style="width: 50%">
+            <div class="bsi__opener">
+              <div>
                 <img
                   style="width: 500px; margin: 0 auto; display: block"
                   src="./dist/img/BSILogo.svg"
                   alt=""
                 />
               </div>
-              <div style="width: 50%">
+              <div>
                 <p>
                   Beyond Speech Initiative, Inc. is a 501(c)(3) nonprofit
                   organization (T.I.N. 99-1280472) dedicated to empowering
@@ -267,6 +261,33 @@ for all ages"
               </div>
             </section>
             <section class="fade-in-element">
+              <!-- <div class="bsi__collage splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./dist/img/BSI_1.jpg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./dist/img/BSI_2.jpg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./dist/img/BSI_3.jpg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./dist/img/BSI_4.jpg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./dist/img/BSI_5.jpg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./dist/img/BSI_6.jpg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./dist/img/BSI_7.jpg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+              </div> -->
               <h2 class="section__title section__title--blue">
                 S2C Scholarships
               </h2>
@@ -494,6 +515,16 @@ for all ages"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+
+    <script>
+      new Splide(".splide", {
+        type: "fade",
+        rewind: true,
+        arrows: false,
+        pagination: false,
+      }).mount();
+    </script>
+
     <script>
       const wrap = d3.select("#chart-wrap");
       let wrapWidth = parseInt(wrap.style("width"));
