@@ -163,7 +163,7 @@ for all ages"
             </h2> -->
             <div class="team__container">
               <div class="team__row">
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/SAM.png" alt="" />
                   </div>
@@ -194,7 +194,7 @@ for all ages"
                     <p class="truncatedText"></p>
                   </div>
                 </div>
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/EMMA.jpg" alt="" />
                   </div>
@@ -215,7 +215,7 @@ for all ages"
                     <p class="truncatedText"></p>
                   </div>
                 </div>
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/michaela.jpg" alt="" />
                   </div>
@@ -244,7 +244,7 @@ for all ages"
               </div>
 
               <div class="team__row">
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/ERIKA.jpg" alt="" />
                   </div>
@@ -276,7 +276,7 @@ for all ages"
                     <p class="truncatedText"></p>
                   </div>
                 </div>
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/KARISSA.jpg" alt="" />
                   </div>
@@ -305,7 +305,7 @@ for all ages"
                     <p class="truncatedText"></p>
                   </div>
                 </div>
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/CAROLINE.jpg" alt="" />
                   </div>
@@ -331,7 +331,7 @@ for all ages"
                 </div>
               </div>
               <div class="team__row">
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/KAYLEY.jpg" alt="" />
                   </div>
@@ -359,7 +359,7 @@ for all ages"
                     <p class="truncatedText"></p>
                   </div>
                 </div>
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/TARYN.jpg" alt="" />
                   </div>
@@ -385,7 +385,7 @@ for all ages"
                     <p class="truncatedText"></p>
                   </div>
                 </div>
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/AMBER.png" alt="" />
                   </div>
@@ -406,7 +406,7 @@ for all ages"
               </div>
 
               <div class="team__row">
-                <div class="team__card fade-in-element">
+                <div class="team__card fade-in-element js-team-card-truncate">
                   <div class="team__img">
                     <img src="./dist/img/MALLORY.png" alt="" />
                   </div>
@@ -593,7 +593,7 @@ for all ages"
 
       let readMore;
 
-      let teamCards = document.querySelectorAll(".team__card");
+      let teamCards = document.querySelectorAll(".js-team-card-truncate");
       teamCards.forEach((teamCard) => {
         let blockQuoteFull = teamCard.querySelector(".fullText");
         let blockQuoteTruncated = teamCard.querySelector(".truncatedText");
@@ -625,7 +625,7 @@ for all ages"
         readMore.addEventListener("click", () => {
           modal.classList.add("team__modal-wrapper--active");
           document.body.classList.add("modal-open");
-          let teamCard = readMore.closest(".team__card").innerHTML;
+          let teamCard = readMore.closest(".js-team-card-truncate").innerHTML;
           const teamModalCard = document.querySelector(".team__modal-card");
 
           teamModalCard.innerHTML = teamCard;

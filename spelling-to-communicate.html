@@ -258,7 +258,11 @@ for all ages">
                                 </div>
                             </div>
                             
-<div class="team__card fade-in-element">
+
+                        </div>
+
+                        <div class="team__row">
+                            <div class="team__card fade-in-element">
                                 <div class="team__img">
                                     <img src="./dist/img/TARYN.jpg" alt="">
                                 </div>
@@ -278,8 +282,29 @@ for all ages">
                                     </p>
                                 </div>
                             </div>
-                        </div>
 
+                            <div class="team__card js-team-card-truncate fade-in-element">
+                  <div class="team__img">
+                    <img src="./dist/img/MALLORY.png" alt="" />
+                  </div>
+                  <div class="team__content">
+                    <h3 class="team__title">Mallory Chizek</h3>
+                    <span class="team__roles">
+                      S2C Practitioner-in-Training</span
+                    >
+                    <p style="display: none" class="fullText">
+                      Mallory is thrilled to be the heart of our Columbus office and is on track to become a certified S2C Practitioner in May 2026. She believes every individual deserves to feel understood, respected, and valued. For over three years, she has worked with nonspeaking individuals - an experience that has deeply shaped her passion for supporting open and authentic communication. Mallory approaches her work by presuming competence, meeting each person where they are, and collaborating closely with clients and their families to find strategies that support growth and make everyday life more empowering. With over three years of experience at Brain Balance, she strives to create a welcoming space where individuals and families feel supported, confident, and empowered to show what they’re capable of.
+                    </p>
+                    <p class="truncatedText"></p>
+
+                  </div>
+                </div>
+                <div class="team__card team__card--placeholder">
+                  <p style="display: none" class="fullText">
+                    </p>
+                    <p class="truncatedText"></p>
+                </div>
+                        </div>
 
                     </div>
                    </section>
@@ -363,7 +388,15 @@ for all ages">
         </main>
 
         <div class="back-to-top"></div>
-
+<div class="team__modal-wrapper">
+      <div class="team__modal-overlay"></div>
+      <div class="team__modal-inner">
+        <div class="team__modal-card">
+          
+          </div>
+          <i class="team__modal-close-icon fas fa-times-circle"></i>
+        </div>
+      </div>
         <footer class="footer">
             <!-- <video id="hero-video" autoplay muted loop playsinline poster="fallback.jpg">
                 <source src="dist/img/kidsblocks.mp4" type="video/mp4">
@@ -469,6 +502,78 @@ for all ages">
     drag: true
   } ).mount();
 </script>
+
+ <script>
+      function truncateString(
+        str,
+        max,
+        ending = "<span class='team__readmore'>...read more</span>"
+      ) {
+        if (str.length <= max) {
+          return str;
+        }
+        // Calculate the new length, accounting for the 'ending' length
+        const truncatedLength = max;
+        // Ensure we don't end up with a negative length if max is very small
+        const finalLength = truncatedLength > 0 ? truncatedLength : max;
+        return str.slice(0, finalLength) + ending;
+      }
+
+      let readMore;
+
+      let teamCards = document.querySelectorAll(".js-team-card-truncate");
+      teamCards.forEach((teamCard) => {
+        let blockQuoteFull = teamCard.querySelector(".fullText");
+        let blockQuoteTruncated = teamCard.querySelector(".truncatedText");
+        readMore = teamCard.querySelector(".team__readMoreLink");
+
+        blockQuoteTruncated.innerHTML =
+          " " + truncateString(blockQuoteFull.textContent.trim(), 350) + " ";
+
+        // teamCard.addEventListener("click", (e) => {
+        //   if (e.target.matches(".team__readmore")) {
+        //     // blockQuoteTruncated.innerHTML = blockQuoteFull.innerHTML;
+        //     if (blockQuoteFull.style.display === "none") {
+        //       blockQuoteFull.style.display = "block";
+        //       blockQuoteTruncated.style.display = "none";
+        //     } else {
+        //       blockQuoteFull.style.display = "none";
+        //       blockQuoteTruncated.style.display = "block";
+        //     }
+        //   }
+        // });
+      });
+
+      const modal = document.querySelector(".team__modal-wrapper");
+      const modalOverlay = document.querySelector(".team__modal-overlay");
+      const readMores = document.querySelectorAll(".team__readmore");
+      const closeBtn = document.querySelector(".team__modal-close-icon");
+
+      readMores.forEach((readMore) => {
+        readMore.addEventListener("click", () => {
+          modal.classList.add("team__modal-wrapper--active");
+          document.body.classList.add("modal-open");
+          let teamCard = readMore.closest(".js-team-card-truncate").innerHTML;
+          const teamModalCard = document.querySelector(".team__modal-card");
+
+          teamModalCard.innerHTML = teamCard;
+
+          teamModalCard.querySelector(".fullText").style.display = "block";
+          teamModalCard.querySelector(".truncatedText").style.display = "none";
+
+        });
+      });
+
+      modalOverlay.addEventListener("click", () => {
+        modal.classList.remove("team__modal-wrapper--active");
+        document.body.classList.remove("modal-open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.classList.remove("team__modal-wrapper--active");
+        document.body.classList.remove("modal-open");
+      });
+    </script>
 </body>
 
 </html>
