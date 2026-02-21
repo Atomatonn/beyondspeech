@@ -248,9 +248,10 @@ for all ages"
                     id="age"
                     type="text"
                     name="age"
-                    pattern="[0-9]{3}"
+                    pattern="[0-9]*"
                     class="form__input"
                     autocomplete="false"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                   />
                   <div class="form__border"></div>
                 </div>
