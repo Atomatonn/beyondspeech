@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="html">
   <head>
     <meta charset="utf-8" />
@@ -18,6 +18,15 @@ Reading Intervention
 for all ages"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      property="og:image"
+      content="./dist/img/beyond-speech-preview-image.jpg"
+    />
+    <meta
+      name="twitter:image"
+      content="./dist/img/beyond-speech-preview-image.jpg"
+    />
 
     <link
       rel="shortcut icon"
@@ -359,7 +368,7 @@ for all ages"
 
           // --- You can place any other code that should run at this delayed time here ---
           console.log(
-            "3 seconds after load, scrolling is now enabled and preloader is hidden."
+            "3 seconds after load, scrolling is now enabled and preloader is hidden.",
           );
         }, 2000); // 3000 milliseconds = 3 seconds
       });
@@ -372,7 +381,7 @@ for all ages"
         };
 
         const service = new google.maps.places.PlacesService(
-          document.createElement("div")
+          document.createElement("div"),
         );
 
         service.getDetails(request, (place, status) => {
@@ -388,7 +397,7 @@ for all ages"
       function truncateString(
         str,
         max,
-        ending = "<span class='testimonial__readmore'><a href='https://search.google.com/local/reviews?placeid=ChIJg43FLcEnMYgRx-Bn_r-uBEc' target='_blank' class='testimonial__readMoreLink'>...read more on google reviews</a></span>"
+        ending = "<span class='testimonial__readmore'><a href='https://search.google.com/local/reviews?placeid=ChIJg43FLcEnMYgRx-Bn_r-uBEc' target='_blank' class='testimonial__readMoreLink'>...read more on google reviews</a></span>",
       ) {
         if (str.length <= max) {
           return str;
@@ -421,7 +430,7 @@ for all ages"
       <li class="splide__slide">
                                     <div class="testimonial__card">
                                     <span class="testimonial__rating">${renderStars(
-                                      review.rating
+                                      review.rating,
                                     )}</span>
 
                                         <blockquote style="display: none" class="fullText">
@@ -453,7 +462,7 @@ for all ages"
           let blockQuoteTruncated =
             testimonialCard.querySelector(".truncatedText");
           readMore = testimonialCard.querySelector(
-            ".testimonial__readMoreLink"
+            ".testimonial__readMoreLink",
           );
 
           blockQuoteTruncated.innerHTML =
