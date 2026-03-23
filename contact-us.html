@@ -36,7 +36,12 @@ for all ages"
     />
 
     <link rel="icon" type="image/png" href="./dist/img/General/favicon.ico" />
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render=SECRET_KEY_HERE"></script> -->
+    <script
+      src="https://www.google.com/recaptcha/api.js?render=6LfKupQsAAAAADtVN7G-UaebIoUJCjPfn_5YWDd9"
+      async
+      defer
+    ></script>
+
     <script
       src="https://kit.fontawesome.com/fb218ddc57.js"
       crossorigin="anonymous"
@@ -495,6 +500,35 @@ for all ages"
                   </p> -->
                 </div>
               </form>
+              <small
+                style="
+                  color: #777;
+                  display: block;
+                  margin-top: 10px;
+                  text-align: left;
+                  width: 500px;
+                  max-width: 100%;
+                  line-height: 25px;
+                "
+              >
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy">Privacy Policy</a>
+                and
+                <a href="https://policies.google.com/terms">Terms of Service</a>
+                apply.
+              </small>
+              <div
+                id="success-message"
+                style="display: none; color: green; font-size: 1.5rem"
+              >
+                Thank you! Your message has been sent.
+              </div>
+              <div
+                id="error-message"
+                style="display: none; color: red; font-size: 1.5rem"
+              >
+                Something went wrong. Please try again.
+              </div>
             </div>
           </section>
         </div>
@@ -715,6 +749,74 @@ for all ages"
           }
         });
       });
+
+      document
+        .getElementById("form")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const form = event.target;
+          const formData = new FormData(form);
+
+          try {
+            // Step 1: Execute reCAPTCHA v3 to get token (invisible, no user interaction)
+            const token = await grecaptcha.execute(
+              "6LfKupQsAAAAADtVN7G-UaebIoUJCjPfn_5YWDd9",
+              { action: "submit" },
+            );
+
+            // Step 2: Add the token to the form data (this is what Formspree expects)
+            formData.append("g-recaptcha-response", token);
+
+            // Debug: see what's being sent
+            console.log(
+              "Form data with captcha:",
+              Object.fromEntries(formData),
+            );
+            console.log("job selections:", formData.getAll("job"));
+
+            const response = await fetch("https://formspree.io/f/mqezkjek", {
+              method: "POST",
+              headers: { Accept: "application/json" },
+              body: formData, // FormData handles multipart automatically
+            });
+
+            if (response.ok) {
+              document.getElementById("success-message").style.display =
+                "block";
+              document.getElementById("error-message").style.display = "none";
+              form.reset();
+              inputElements.forEach((inputElement) => {
+                inputElement.value = "";
+                inputElement
+                  .closest(".form__field")
+                  .classList.remove("form__field--valid");
+              });
+              setTimeout(
+                () =>
+                  (document.getElementById("success-message").style.display =
+                    "none"),
+                5000,
+              );
+            } else {
+              const data = await response.json();
+              console.error("Formspree error:", response.status, data);
+              let errMsg = "Submission failed.";
+              if (data.errors) {
+                errMsg = data.errors
+                  .map((e) => e.message || e.field)
+                  .join("; ");
+              }
+              document.getElementById("error-message").textContent = errMsg;
+              document.getElementById("error-message").style.display = "block";
+            }
+          } catch (err) {
+            console.error("Error (captcha or network):", err);
+            document.getElementById("error-message").textContent =
+              "Error – check console (likely captcha issue).";
+            document.getElementById("error-message").style.display = "block";
+          }
+        });
     </script>
   </body>
 </html>
